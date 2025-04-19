@@ -23,3 +23,10 @@ jobs:
         env:
           Configuration: ${{ matrix.configuration }}
           Platform: ${{ matrix.platform }}
+
+      - name: Archive application
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: application-${{ matrix.configuration }}-${{ matrix.platform }}
+          path: ${{ matrix.platform }}\${{ matrix.configuration }}\*
