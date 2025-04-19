@@ -29,4 +29,4 @@ jobs:
         if: always()
         with:
           name: application-${{ matrix.configuration }}-${{ matrix.platform }}
-          path: ${{ matrix.platform }}\${{ matrix.configuration }}\*
+          path: DbgPrintView\bin\${{ matrix.configuration }}\*
